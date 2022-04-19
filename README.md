@@ -3,7 +3,7 @@ Repositório para armazenar meus projetos de treinamento em react
 
 
 
-Configurando ambiente React Native / Windows
+#Configurando ambiente React Native / Windows
 Dependências necessárias:
 Chocolatey;
 Node.js;
@@ -146,4 +146,11 @@ Nesse momento, será apresentada uma janela informando os componentes a serem in
 Na sequência, serão apresentadas as licenças da SDK. Selecione a opção Accept e clique em Next.
 
 Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e repare que a agora a API 29 (instalada por padrão) e 28 estão com status Installed.
+
+
+
+Instalar o expo:
+
+cmd: yarn add expo-cli
+
 
