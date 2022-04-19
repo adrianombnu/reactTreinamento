@@ -3,7 +3,7 @@ Repositório para armazenar meus projetos de treinamento em react
 
 
 
-#Configurando ambiente React Native / Windows
+# Configurando ambiente React Native / Windows
 Dependências necessárias:
 Chocolatey;
 Node.js;
