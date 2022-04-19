@@ -151,6 +151,6 @@ Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e 
 
 Instalar o expo:
 
-cmd: yarn add expo-cli
+cmd: npm install -g expo-cli
 
 
