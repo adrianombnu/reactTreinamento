@@ -153,6 +153,10 @@ Instalar o expo:
 
 cmd: npm install -g expo-cli
 
+para criar o projeto:
+cmd: expo init nomeDoProjeto
+Se atentar para usar o bare workflow.
+
 Para inciar um projeto:
 
 cmd: expo start
