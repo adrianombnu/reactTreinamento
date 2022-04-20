@@ -153,4 +153,6 @@ Instalar o expo:
 
 cmd: npm install -g expo-cli
 
+Para inciar um projeto:
 
+cmd: expo start
