@@ -149,14 +149,21 @@ Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e 
 
 
 
-Instalar o expo:
+# Instalar o expo:
 
 cmd: npm install -g expo-cli
 
-para criar o projeto:
+# Para criar o projeto:
 cmd: expo init nomeDoProjeto
 Se atentar para usar o bare workflow.
 
-Para inciar um projeto:
+# Para iniciar um projeto:
 
 cmd: expo start
+
+ou
+
+cmd: npx react-native run-android
+
+Se não der certo com o npx, precisamos verificar se tem alguma problema:
+cmd npx react-native doctor
