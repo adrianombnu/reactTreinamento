@@ -152,21 +152,29 @@ Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e 
 # Instalar o expo:
 
 # Markdown 
-''' 
+```
 cmd: npm install -g expo-cli
-'''
+```
 
 # Para criar o projeto:
+# Markdown
+```
 cmd: expo init nomeDoProjeto
+```
 Se atentar para usar o bare workflow.
 
 # Para iniciar um projeto:
 
+# Markdown
+```
 cmd: expo start
-
 ou
-
 cmd: npx react-native run-android
+```
 
 Se não der certo com o npx, precisamos verificar se tem alguma problema:
+
+# Markdown
+```
 cmd npx react-native doctor
+```
