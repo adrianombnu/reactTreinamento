@@ -155,11 +155,21 @@ Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e 
 ```
 cmd: npm install -g expo-cli
 ```
+# Desinstalar o expo:
+Lista pacotes instalados no npm:
+# Markdown 
+```
+npm list -g 
+```
+# Markdown 
+```
+npm -g uninstall expo-cli --save
+```
 
 # Para criar o projeto:
 # Markdown
 ```
-cmd: expo init nomeDoProjeto
+expo init nomeDoProjeto
 ```
 Se atentar para usar o bare workflow.
 
@@ -167,14 +177,14 @@ Se atentar para usar o bare workflow.
 
 # Markdown
 ```
-cmd: expo start
+expo start
 ou
-cmd: npx react-native run-android
+npx react-native run-android
 ```
 
 Se não der certo com o npx, precisamos verificar se tem alguma problema:
 
 # Markdown
 ```
-cmd npx react-native doctor
+npx react-native doctor
 ```
