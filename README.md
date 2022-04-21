@@ -148,14 +148,14 @@ Na sequência, serão apresentadas as licenças da SDK. Selecione a opção Acce
 Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e repare que a agora a API 29 (instalada por padrão) e 28 estão com status Installed.
 
 
-
-# Instalar o expo:
+# Expo
+## Instalar o expo:
 
 # Markdown 
 ```
 cmd: npm install -g expo-cli
 ```
-# Desinstalar o expo:
+## Desinstalar o expo:
 Lista pacotes instalados no npm:
 # Markdown 
 ```
@@ -188,3 +188,11 @@ Se não der certo com o npx, precisamos verificar se tem alguma problema:
 ```
 npx react-native doctor
 ```
+
+# Yarn
+## Desinstalar o yarn
+# Markdown 
+```
+npm uninstall -g yarn
+```
+
