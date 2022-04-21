@@ -7,7 +7,6 @@ Repositório para armazenar meus projetos de treinamento em react
 
 ## Dependências necessárias:
 
-# Markdown
  - Chocolatey;
  - Node.js;
  - Python 2;
@@ -18,30 +17,25 @@ Repositório para armazenar meus projetos de treinamento em react
 ## Instalando Chocolatey
 Para instalar as libs no Windows, vamos utilizar um gerenciador de pacotes do Windows chamado Chocolatey. Esse gerenciador nos possibilita instalar dependências e ferramentas no sistema com poucos comandos e tudo pelo terminal. Execute o powershell como administrador utilizando a tecla Windows + X ou clicando com o botão direito sobre o botão “Iniciar”:
 
-
 Execute o comando abaixo para verificar se você possui permissões para instalar dependências com o terminal:
 
-# Markdown
 ```
 Get-ExecutionPolicy
 ```
 Caso o retorno desse comando seja diferente de “Restricted”, pule para o próximo passo. Porém, se o retorno for “Restricted”, execute o seguinte comando em seu terminal:
 
-# Markdown
 ```
 Set-ExecutionPolicy AllSigned
 ```
 
 Agora, execute o seguinte comando para instalar o Chocolatey:
 
-# Markdown
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
 Agora, feche seu powershell e abra normalmente seu CMD e teste se a instalação ocorreu corretamente executando o seguinte comando no seu cmd:
 
-# Markdown
 ```
 choco -v
 ```
@@ -50,14 +44,12 @@ choco -v
 
 Abra novamente seu powershell como administrador e rode.
 
-# Markdown
 ```
 choco install -y nodejs-lts yarn python2 openjdk11
 ```
 
 Agora feche seu powershell e abra seu cmd normalmente e execute, um de cada vez, os seguintes comandos para verificar se instalou corretamente:
 
-# Markdown
 ```
 node -v
 npm -v
@@ -67,13 +59,11 @@ java -version
 
 Se todas apresentaram os valores das suas versões, a instalação foi um sucesso. Desses valores, precisamos anotar apenas um: uma parte do java -version. Supondo que o resultado desse comando tenha sido:
 
-# Markdown
 ```
 java version “1.8.0_251”
 Java(TM) SE Runtime Environment (build 1.8.0_251-b08)
 Java HotSpot(TM) Client VM (build 25.251-b08, mixed mode)
-```
- 
+``` 
 
 ## Preparativos Android Studio
 
@@ -89,15 +79,19 @@ Você pode ir no seu computador e ir nas pastas: C:\Program Files\OpenJDK e lá 
 
 Agora só pegar todo caminho até essa pasta exemplo aqui no meu PC: 
 
+```
 C:\Program Files\OpenJDK\openjdk-11.0.14.1_1
+```
 
 E colocar esse caminho nas suas variáveis ambiente como JAVA_HOME
 
+```
 C:\Program Files\OpenJDK\openjdk-[VERSÃO_ANOTADA_POR_VOCÊ]
+```
 
 Na mesma janela de “Variáveis de ambiente” no Windows, clique na variável PATH e então em “Editar“. Haverá uma lista de caminhos e você deve adicionar esses quatro novos caminhos no fim da lista:
 
-# Markdown
+
  - %ANDROID_HOME%\emulator
 
  - %ANDROID_HOME%\tools
@@ -138,11 +132,9 @@ Na sequência, será pedido o tipo de instalação. Escolha a opção Custom e c
 
 Nesse momento, será pedido para escolher a localização do pacote JDK instalado. Clique em ⬇ e escolha a opção JAVA_HOME. Verifique se ela está apontando para a JDK 8. Clique em Next
 
-
 Agora, será perguntado sobre qual tema será utilizado. Escolha o que preferir e clique em Next
 
 Chegamos na etapa mais importante do processo, a instalação da SDK. A janela apresentará algumas opções, marque todas.
-
 
 A SDK é o pacote que vai possibilitar que sua aplicação React Native faça o build. Por padrão, ele instala a última SDK estável (nesse caso a 29);
 O Intel HAXM é para melhorar a performance da emulação (Se você for utilizar o Hyper-V ou possuir um processador AMD, não marque essa opção.
@@ -157,11 +149,9 @@ Em seguida, será apresentada uma janela com um resumo de todas as opções esco
 
 Por fim, será realizada a instalação das configurações selecionadas. Quando o programa terminar, clique em Finish.
 
-SDK Manager
- 
+### SDK Manager 
 
 Em seguida, na aba SDK Platforms selecione o Android 9.0 (Pie), que corresponde à API (SDK) 28, e clique em Apply.
-
 
 Nesse momento, será apresentada uma janela informando os componentes a serem instalados, o tamanho do download e da instalação e o espaço disponível na pasta SDK. Clique em OK.
 
@@ -172,7 +162,6 @@ Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e 
 
 # Expo
 ## Instalar o expo:
-
 
 ```
 cmd: npm install -g expo-cli
@@ -197,15 +186,12 @@ Se atentar para usar o bare workflow.
 
 # Para iniciar um projeto:
 
-
 ```
 expo start
 ou
 npx react-native run-android
 ```
-
 Se não der certo com o npx, precisamos verificar se tem alguma problema:
-
 
 ```
 npx react-native doctor
