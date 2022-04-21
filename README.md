@@ -4,61 +4,84 @@ Repositório para armazenar meus projetos de treinamento em react
 
 
 # Configurando ambiente React Native / Windows
-Dependências necessárias:
-Chocolatey;
-Node.js;
-Python 2;
-Openjdk11;
-Android Studio
-Instalando Chocolatey
+
+## Dependências necessárias:
+
+# Markdown
+ - Chocolatey;
+ - Node.js;
+ - Python 2;
+ - Openjdk11;
+ - Android Studio
+ - Java
+
+## Instalando Chocolatey
 Para instalar as libs no Windows, vamos utilizar um gerenciador de pacotes do Windows chamado Chocolatey. Esse gerenciador nos possibilita instalar dependências e ferramentas no sistema com poucos comandos e tudo pelo terminal. Execute o powershell como administrador utilizando a tecla Windows + X ou clicando com o botão direito sobre o botão “Iniciar”:
 
 
 Execute o comando abaixo para verificar se você possui permissões para instalar dependências com o terminal:
 
+# Markdown
+```
 Get-ExecutionPolicy
-
+```
 Caso o retorno desse comando seja diferente de “Restricted”, pule para o próximo passo. Porém, se o retorno for “Restricted”, execute o seguinte comando em seu terminal:
 
+# Markdown
+```
 Set-ExecutionPolicy AllSigned
+```
 
 Agora, execute o seguinte comando para instalar o Chocolatey:
 
+# Markdown
+```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
 Agora, feche seu powershell e abra normalmente seu CMD e teste se a instalação ocorreu corretamente executando o seguinte comando no seu cmd:
 
+# Markdown
+```
 choco -v
+```
 
-Agora vamos instalar o Node.js,  Python2 e a openjdk 11
+## Agora vamos instalar o Node.js,  Python2 e a openjdk 11
 
 Abra novamente seu powershell como administrador e rode.
 
+# Markdown
+```
 choco install -y nodejs-lts yarn python2 openjdk11
+```
 
 Agora feche seu powershell e abra seu cmd normalmente e execute, um de cada vez, os seguintes comandos para verificar se instalou corretamente:
 
+# Markdown
+```
 node -v
 npm -v
 python –version
 java -version
+```
 
 Se todas apresentaram os valores das suas versões, a instalação foi um sucesso. Desses valores, precisamos anotar apenas um: uma parte do java -version. Supondo que o resultado desse comando tenha sido:
 
+# Markdown
+```
 java version “1.8.0_251”
 Java(TM) SE Runtime Environment (build 1.8.0_251-b08)
 Java HotSpot(TM) Client VM (build 25.251-b08, mixed mode)
-
+```
  
 
-Preparativos Android Studio
+## Preparativos Android Studio
+
 Crie uma pasta em um local desejado para instalação da SDK (Ex.: C:\Android\Sdk). É muito importante que esse caminho não possua espaços ou caracteres especiais pois irá causar erros.
 
 Anote esse caminho para ser utilizado posteriormente
 
 Agora, no Painel de Controle do Windows, abra o item “Sistema e Segurança” ou “Sistema”, clique em “Configurações avançadas do sistema”, e clique no botão “Variáveis de ambiente” e clique no botão “Nova variável de ambiente”, indique o nome da variável como ANDROID_HOME, adicione o caminho utilizado acima (Ex.: C:\Android\Sdk) como segundo parâmetro e clique em OK.
-
- 
-
 
 Faça o mesmo processo para criar a variável JAVA_HOME. Mas primeiramente temos que obter o caminho de instalação.
 
@@ -74,18 +97,19 @@ C:\Program Files\OpenJDK\openjdk-[VERSÃO_ANOTADA_POR_VOCÊ]
 
 Na mesma janela de “Variáveis de ambiente” no Windows, clique na variável PATH e então em “Editar“. Haverá uma lista de caminhos e você deve adicionar esses quatro novos caminhos no fim da lista:
 
-%ANDROID_HOME%\emulator
+# Markdown
+ - %ANDROID_HOME%\emulator
 
-%ANDROID_HOME%\tools
+ - %ANDROID_HOME%\tools
 
-%ANDROID_HOME%\tools\bin
+ - %ANDROID_HOME%\tools\bin
 
-%ANDROID_HOME%\platform-tools
+ - %ANDROID_HOME%\platform-tools
 
 ** Se sua versão do Windows for menor que a 10 sempre coloque ponto-e-virgula “;” no final dos caminhos para eles não se juntarem **
 
 
-Instalando Android Studio
+## Instalando Android Studio
 Acesse a página do Android Studio e clique no botão Download Android Studio.
 
 Vá até a pasta onde o arquivo foi salvo e execute o instalador.
@@ -100,9 +124,7 @@ Nessa etapa será realizada instalação. Quando terminar, clique em Next.
 
 Por fim, será apresentada a janela de fim da instalação. Deixe a opção Start Android Studio marcada e clique em Finish.
 
- 
-
-Configurando Android Studio
+### Configurando Android Studio
  
 Com o Android Studio instalado, chegou a hora de fazer a configuração inicial do programa.
 
