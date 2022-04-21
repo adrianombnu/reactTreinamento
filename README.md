@@ -151,7 +151,10 @@ Por fim, será realizada a instalação. Ao fim do processo, clique em Finish e 
 
 # Instalar o expo:
 
+# Markdown 
+''' 
 cmd: npm install -g expo-cli
+'''
 
 # Para criar o projeto:
 cmd: expo init nomeDoProjeto
