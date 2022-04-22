@@ -204,3 +204,12 @@ npx react-native doctor
 npm uninstall -g yarn
 ```
 
+
+# Android Studio Asset
+
+Para criar ícones no android studio asset, temos que abrir o android studio e importar o projeto react a partir da pasta android. Com isso, basta apenas:
+```
+Clicar com botão direito na pasta res > New > Image asset: importar a imagem a ser utilizada para a logo.
+
+```
+
