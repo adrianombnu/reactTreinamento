@@ -1,4 +1,4 @@
-# react_treinamento
+# Repositório
 Repositório para armazenar meus projetos de treinamento em react
 
 
@@ -193,6 +193,9 @@ e do gradle:
 npm i react-native-update-gradle
 ```
 
+## Gradle e demais depedências
+Após a criação do projeto, abrir o projeto (Pasta android) no android studio e se houver alguma syncronização (atualização) necessária, lá vai aparacer uma mensagem informando. Sendo assim, basta prosseguir com a atualização conforme for sugerida.
+
 # Para iniciar um projeto:
 
 ```
@@ -238,6 +241,3 @@ expo start
 ```
 
 
-# Gradle
-Para a execução do app no android, se der qualquer erro referente ao versionamento do gradle, abrir o projeto (Pasta android) no android studio e lá vai aparacer uma mensagem informando que exitem atualizações do gradle a ser feita.
-Sendo assim, basta prosseguir com a atualização para a versão que será sugerida.
