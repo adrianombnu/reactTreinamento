@@ -213,3 +213,17 @@ Clicar com botão direito na pasta res > New > Image asset: importar a imagem a 
 
 ```
 
+# Clonar repositório
+
+Ao clonar o repositório para que possamos ter o projeto na máquina e poder executa-lo, é necessário executar os comandos abaixo depois que o clone estiver sido concluiudo:
+
+```
+yarn install
+```
+Ao executar o comando acima, no cmd, posicionado na pasta do projeto desejado, será feito a instalação de todas as depências do projeto com base no arquivo package.json.
+
+Feito isto, basta iniciar o projeto:
+
+```
+expo start
+```
