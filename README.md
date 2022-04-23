@@ -184,6 +184,15 @@ expo init nomeDoProjeto
 ```
 Se atentar para usar o bare workflow.
 
+É aconselhável fazer um upgrade do expo:
+```
+expo upgrade
+```
+e do gradle:
+```
+npm i react-native-update-gradle
+```
+
 # Para iniciar um projeto:
 
 ```
@@ -227,3 +236,8 @@ Feito isto, basta iniciar o projeto:
 ```
 expo start
 ```
+
+
+# Gradle
+Para a execução do app no android, se der qualquer erro referente ao versionamento do gradle, abrir o projeto (Pasta android) no android studio e lá vai aparacer uma mensagem informando que exitem atualizações do gradle a ser feita.
+Sendo assim, basta prosseguir com a atualização para a versão que será sugerida.
