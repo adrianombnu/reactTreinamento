@@ -1,0 +1,14 @@
+com/biscoitodasorte/ReactNativeFlipper.java
+ com.biscoitodasorte.ReactNativeFlipper
+ com.biscoitodasorte.ReactNativeFlipper$1
+ com.biscoitodasorte.ReactNativeFlipper$2
+ com.biscoitodasorte.ReactNativeFlipper$2$1
+com/biscoitodasorte/MainActivity.java
+ com.biscoitodasorte.MainActivity
+com/biscoitodasorte/MainApplication.java
+ com.biscoitodasorte.MainApplication
+ com.biscoitodasorte.MainApplication$1
+com/biscoitodasorte/BuildConfig.java
+ com.biscoitodasorte.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
