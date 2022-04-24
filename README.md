@@ -200,9 +200,25 @@ Após a criação do projeto, abrir o projeto (Pasta android) no android studio 
 
 ```
 expo start
+```
 ou
+```
 npx react-native run-android
 ```
+ou 
+
+Para executar o projeto em um emulador especifico vamos precisar do id deste. Para isso, precisamos obrigatoriamente estar com o emulador em execução. Desta forma, no prompt de comando basta digitar:
+```
+adb devices
+```
+Será apresentado a lista de emuladores em execução e basta copiar o nome do emulador desejado.
+Ex.: 
+List of devices attached
+emulator-5554   device
+```
+npx react-native run-android emulator-5554
+```
+
 Se não der certo com o npx, precisamos verificar se tem alguma problema:
 
 ```
