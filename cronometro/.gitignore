@@ -66,6 +66,8 @@ local.properties
 *.iml
 *.hprof
 /android/
+*.apk
+
 
 # Node
 node_modules
@@ -130,6 +132,7 @@ package-lock.json
 *.hprof
 
 # Expo
-.expo/
+.expo/*
+npm-debug.*
 web-build/
 dist/
