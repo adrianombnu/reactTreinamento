@@ -132,7 +132,7 @@ package-lock.json
 *.hprof
 
 # Expo
-.expo/*
+.expo/
 npm-debug.*
 web-build/
 dist/
