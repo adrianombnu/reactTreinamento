@@ -63,6 +63,8 @@ buck-out
 local.properties
 *.iml
 /android/
+*.apk
+
 
 # Node
 node_modules
@@ -125,3 +127,7 @@ package-lock.json
 
 # Android memory profiler files
 *.hprof
+
+# Expo
+.expo/*
+npm-debug.*
