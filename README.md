@@ -257,9 +257,9 @@ expo start
 ```
 
 # Gitignore
-O arquivo deve estar dentro do diretório raiz do projeto. 
-
-Ex.: reactTrenaimento/biscoitoDaSorte/.gitignore
-
+O arquivo deve estar dentro do diretório raiz do repositório: 
+```
+Ex.: reactTrenaimento/.gitignore
+```
 
 
