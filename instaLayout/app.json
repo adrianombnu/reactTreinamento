@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "instaLayout",
+    "slug": "instaLayout",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
