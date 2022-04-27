@@ -66,7 +66,7 @@ class Lista extends Component{
     }
 
     carregaIcone(likeada){
-        return likeada ? require('../img/likeada.png') : require('../img/like.png')
+        return likeada ? require('../../img/likeada.png') : require('../../img/like.png')
     }
 
     render(){
@@ -105,7 +105,7 @@ class Lista extends Component{
                     <TouchableOpacity style={styles.btnSend}> 
 
                         <Image 
-                            source={require('../img/send.png')}
+                            source={require('../../img/send.png')}
                             style={styles.iconelike}
                         />
 

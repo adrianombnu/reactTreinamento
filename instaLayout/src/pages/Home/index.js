@@ -1,7 +1,7 @@
 import React from "react";
 import { StatusBar } from "react-native";
 
-import Lista from '../../../src/Lista';
+import Lista from '../../Lista/Home';
 
 import {
     StyleSheet,
