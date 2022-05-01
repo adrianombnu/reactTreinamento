@@ -1,201 +1,123 @@
-import React, {Component} from 'react';
+import {
+    React,
+    useState
+} from 'react';
+
 import {
     View,
     Text,
     Image,
-    TouchableOpacity,
-    StyleSheet
-
+    TouchableOpacity
 } from 'react-native';
 
-class Lista extends Component{
+import styles from './style';
 
-    constructor(props){
-
-        super(props);
-        this.state = {
-            feed: this.props.data
-
-        };
-
-        this.carregaIcone = this.carregaIcone.bind(this);
-        this.mostraLikes = this.mostraLikes.bind(this);
-        this.like = this.like.bind(this);
-    }
-
-    mostraLikes(likers){
+export default function Lista(props){
+    
+    const [feed, setFeed] = useState(props.data);
+    
+    function mostraLikes(likers){
                 
         if(likers <= 0 ){
             return;
         }
-
+    
         return(
-
+    
             <Text style={styles.likers}>
                 {likers} {likers > 1 ? 'curtidas' : 'curtida'}
             </Text>
-
+    
         );
-
+    
     }
-
-    like(){
-
-        let feed = this.state.feed;
-
+    
+    function like(){
+             
         if(feed.likeada === true){
-            this.setState({
-                feed:{
-                    ...feed,
-                    likeada: false,
-                    likers: feed.likers - 1
-                }
+               
+            setFeed({
 
+                ...feed,
+                likeada: false,
+                likers: feed.likers - 1  
             });
+    
         }else{
-            this.setState({
-                feed:{
-                    ...feed,
-                    likeada: true,
-                    likers: feed.likers + 1
-                }
+             
+            setFeed({
+                 
+                ...feed,
+                likeada: true,
+                likers: feed.likers + 1
 
             });
+
         }
-
+    
     }
-
-    carregaIcone(likeada){
+    
+    function carregaIcone(likeada){
         return likeada ? require('../../img/likeada.png') : require('../../img/like.png')
     }
+   
+    return (
+        <View style={styles.areaFeed}>
 
-    render(){
-
-        return (
-            <View style={styles.areaFeed}>
-
-                <View style={styles.viewPerfil}>
-
-                    <Image
-                        source={{uri: this.state.feed.imgperfil}}    
-                        style={styles.fotoPerfil}
-                    />
-
-                    <Text style={styles.nomeUsuario}>{this.state.feed.nome}</Text>
-
-                </View>
+            <View style={styles.viewPerfil}>
 
                 <Image
-                    resizeMode='cover'
-                    style={styles.fotoPublicacao}
-                    source={{uri: this.state.feed.imgPublicacao}}
+                    source={{uri: feed.imgperfil}}    
+                    style={styles.fotoPerfil}
                 />
-                
-                <View style={styles.areaBtn}>
 
-                    <TouchableOpacity onPress={this.like}>
-
-                        <Image 
-                            source={this.carregaIcone(this.state.feed.likeada)}
-                            style={styles.iconelike}
-                        /> 
-
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.btnSend}> 
-
-                        <Image 
-                            source={require('../../img/send.png')}
-                            style={styles.iconelike}
-                        />
-
-                    </TouchableOpacity>
-
-                </View>
-
-                {this.mostraLikes(this.state.feed.likers)}
-
-                <View style={styles.viewRodape}>
-
-                    <Text style={styles.nomeRodape}>
-                        {this.state.feed.nome}
-                    </Text>
-
-                    <Text style={styles.descRodape}>
-                        {this.state.feed.descricao}
-                    </Text>
-
-                </View>
+                <Text style={styles.nomeUsuario}>{feed.nome}</Text>
 
             </View>
-        );
 
-    }
-}
+            <Image
+                resizeMode='cover'
+                style={styles.fotoPublicacao}
+                source={{uri: feed.imgPublicacao}}
+            />
+            
+            <View style={styles.areaBtn}>
 
-const styles = StyleSheet.create({
-    areaFeed:{
+                <TouchableOpacity onPress={ () => like()} >
 
-    },
-    nomeUsuario:{
-        fontSize: 22,
-        textAlign: 'left',
-        color: '#000000',
-        paddingLeft: 10
-    },
-    fotoPerfil:{
-        width: 50,
-        height: 50,
-        borderRadius: 25
+                    <Image 
+                        source={carregaIcone(feed.likeada)}
+                        style={styles.iconelike}
+                    /> 
 
-    },
-    fotoPublicacao:{
-        flex: 1,
-        height: 400
-    },
-    viewPerfil:{
-        flexDirection: 'row',
-        flex: 1,
-        alignItems: 'center',
-        padding: 8,
+                </TouchableOpacity>
 
-    },
-    areaBtn:{
-        flexDirection: 'row',
-        padding: 5
+                <TouchableOpacity style={styles.btnSend}> 
 
-    },
-    iconelike:{
-        width: 33,
-        height: 33
-    },
-    btnSend:{
-        paddingLeft: 10
+                    <Image 
+                        source={require('../../img/send.png')}
+                        style={styles.iconelike}
+                    />
 
-    },
-    viewRodape:{
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    descRodape:{
-        paddingLeft: 10,
-        fontSize: 15,
-        color: '#000'
-    },
-    nomeRodape:{
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#000',
-        paddingLeft: 10
-    },
-    likers:{
-        fontWeight: 'bold',
-        marginLeft: 10
-    }
+                </TouchableOpacity>
 
+            </View>
 
+            { mostraLikes(feed.likers) }
 
+            <View style={styles.viewRodape}>
 
-});
+                <Text style={styles.nomeRodape}>
+                    {feed.nome}
+                </Text>
 
-export default Lista;
+                <Text style={styles.descRodape}>
+                    {feed.descricao}
+                </Text>
+
+            </View>
+
+        </View>
+    );
+
+} 

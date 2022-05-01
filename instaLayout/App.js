@@ -21,10 +21,11 @@ export default function App(){
           headerShown: false,
           tabBarHideOnKeyboard: true,
           tabBarShowLabel: false,
-          tabBarActiveTintColor: '#FFF',
+          tabBarActiveTintColor: '#000',
+          tabBarInactiveTintColor: '#4B4747',
 
           tabBarStyle:{
-            backgroundColor: '#202225',
+            backgroundColor: '#FFF',
             borderTopWidth: 0
           }
 
