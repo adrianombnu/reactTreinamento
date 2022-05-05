@@ -263,3 +263,8 @@ Ex.: reactTrenaimento/.gitignore
 ```
 
 
+
+
+# Dicas programação
+
+<SafeAreView> ajuda a evitar problema de sobresição de elementos com a barra de satatus do android e iphone.
